@@ -25,6 +25,9 @@ let db = new sqlite3.Database(DBSOURCE, (err) => {
                 var insert = 'INSERT INTO autor (nome, livro, preco) VALUES (?,?,?)'
                 db.run(insert, ["Paulo Scalercio","React", 1200])
                 db.run(insert, ["Daniel","java",150])
+		db.run(insert, ["Bruno","DevOps",200])
+		db.run(insert, ["Marcos","Design",1000])
+		db.run(insert, ["Nico","Aprenda Alemão",9999])
             }
         });  
     }

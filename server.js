@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 
 app.use(cors());
 // Server port
-var HTTP_PORT = 8000
+var HTTP_PORT = process.env.PORT || 8000;
 // Start server
 app.listen(HTTP_PORT, () => {
     console.log(`Servidor rodando na porta ${HTTP_PORT}`)
@@ -32,6 +32,7 @@ app.get("/api/autor", (req, res, next) => {
             "message": "success",
             "data": rows
         })
+        
     });
 });
 //Lista livros
